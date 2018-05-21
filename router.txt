@@ -1,0 +1,57 @@
+App-routing.module.ts:
+----------------------
+import {C1Componenet} from './c1/c1.component';
+
+const routes:Routes = [
+{path:'C1',component:C1Component},....
+
+App.module.ts:
+--------------
+import {C1Component} from'./c1/c1component';
+declarations{
+C1Component
+}
+
+app.component.html:
+-------------------
+<div>
+<a routerLink="/C1">C1</a>
+<route-outlet></router-outlet>
+
+--------------------------------------------------------
+Create LogService:
+
+log.service.ts:
+---------------
+export class LogService{
+message:string[]=[];
+add(message:string)
+
+c1.componen.ts:
+--------------
+import {LogService} from'../count.service'
+
+@Component({
+selector:'aapp-c1',
+....
+})
+
+export classC1Component implements OnInit{
+start = new Date;
+constructor(private service:CountService){this.log(this.
+}
+ngOnInit(){
+}
+private log(message : string){
+this.service.add("C3Component' +message);
+}
+
+Create message component:
+-------------------------
+message.component.ts:
+--------------------
+@Component({
+})
+
+message.component.html:
+----------------------

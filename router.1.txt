@@ -1,0 +1,10 @@
+this.service.add('MessageService: fetched messages');
+return of(this.service.message);
+
+component:
+ngOnInt(){
+this.getMessages();}
+
+private log(essage: string){
+this.cservice.add('C1Component'+ message);
+}
